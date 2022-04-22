@@ -1,0 +1,310 @@
+- hosts: all
+  user: 
+  become: true
+  become_user: root
+  gather_facts: yes
+
+  vars:
+    EMAIL: henriquebruno@virtual.ufc.br
+    TURN_SERVER: turn.virtual.ufc.br
+    TURN_SECRET: LBZ57w6w
+    SUPPORT_URL: https://webconferencia.virtual.ufc.br/b/pau-waw-gh2
+    SUPPORT_EMAIL: webconferencia@virtual.ufc.br
+    FORM_LOGOUT_URL: https://goo.gl/forms/PEB4WFixcWwuGyOt1
+    CLIENT_TITLE: Solar webconferência
+    COPYRIGHT: Solar webconferência - ©2021 BigBlueButton Inc.
+    DOMINIO: "{{ ansible_hostname }}.virtual.ufc.br"
+
+  tasks:
+    # - name: configurando FQDN
+    #   ansible.builtin.hostname:
+    #     name: "{{ ansible_hostname }}"
+
+    # - name: "Debug facts"
+    #   debug : msg=" dominio is {{ DOMINIO }}"
+    # #debug: msg="ansible_fqdn is  {{ ansible_fqdn }}"
+      #debug: msg="inventory_hostname  is  {{ inventory_hostname  }}"
+      #debug: msg="ansible_hostname is  {{ ansible_hostname }}" 
+      #debug: msg="ansible_default_ipv4is  {{ ansible_default_ipv4 }}"
+    #  debug: var=ansible_facts
+ 
+    # - name: Remove file (delete file)
+    #   ansible.builtin.file:
+    #     path: /etc/hosts
+    #     state: absent
+ 
+    # - name: alterando hosts
+    #   copy:
+    #     dest: "/etc/hosts"
+    #     content: |
+    #       127.0.0.1 localhost
+    #       127.0.1.1 {{ ansible_hostname }}
+    #       {{ ansible_default_ipv4.address }} {{ DOMINIO }}
+    #       ::1 ip6-localhost ip6-loopback
+    #       fe00::0 ip6-localnet
+    #       ff00::0 ip6-mcastprefix
+    #       ff02::1 ip6-allnodes
+    #       ff02::2 ip6-allrouters     
+
+
+
+#     - name: Debug /etc/hosts
+#       shell: cat "/etc/hosts"
+#       register: etc_hosts
+#     - debug :
+#         var: etc_hosts.stdout_lines
+
+#     - name: Update apt repo and cache on all Debian/Ubuntu boxes
+#       apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+#       # In case of invalid signature in the update
+#       # sudo apt-key list | grep -A 1 expired
+#       # sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys <KEY>
+
+#     - name: Upgrade all packages on servers
+#       apt: upgrade=dist force_apt_get=yes
+
+#     - name: Check if a reboot is needed on all servers
+#       register: reboot_required_file
+#       stat: path=/var/run/reboot-required get_md5=no
+
+#     - name: Reboot the box if kernel updated
+#       reboot:
+#         msg: "Reboot initiated by Ansible for kernel updates"
+#         connect_timeout: 5
+#         reboot_timeout: 300
+#         pre_reboot_delay: 0
+#         post_reboot_delay: 30
+#         test_command: uptime
+#       when: reboot_required_file.stat.exists
+
+    # - name: Script
+    #   shell: sudo wget -qO- https://ubuntu.bigbluebutton.org/bbb-install.sh | bash -s -- -v bionic-23 -s "{{ DOMINIO }}" -e '{{ EMAIL }}' -c '{{ TURN_SERVER }}:{{ TURN_SECRET }}'
+
+
+    # - name: Copy default pdf
+    #   copy:
+    #     src: "{{ playbook_dir }}/files/default.pdf"
+    #     dest: /var/www/bigbluebutton-default/
+    #     owner: root
+    #     group: root
+    #     mode: '0755'
+
+    # - name: Copy favicon
+    #   copy:
+    #     src: "{{ playbook_dir }}/files/favicon.ico"
+    #     dest: /var/www/bigbluebutton-default/
+
+    # - name: Copy logo
+    #   copy:
+    #     src: "{{ playbook_dir }}/files/logo.png"
+    #     dest: /var/bigbluebutton/playback/presentation/2.0/
+    #     owner: bigbluebutton
+    #     group: bigbluebutton
+
+    # - name: Copy and extract audio (pt_BR)
+    #   ansible.builtin.unarchive:
+    #     src: "{{ playbook_dir }}/files/en.zip"
+    #     dest: /opt/freeswitch/share/freeswitch/sounds/
+
+    # - name: Recursively change ownership of a directory of audio (pt_BR)
+    #   file:
+    #     path: /opt/freeswitch/share/freeswitch/sounds/en
+    #     state: directory
+    #     recurse: yes
+    #     owner: freeswitch
+    #     group: daemon
+    #     mode: '0755'
+   
+    # - name: Copy cron bbb-recording-cleanup
+    #   copy:
+    #     src: "{{ playbook_dir }}/files/bbb-recording-cleanup"
+    #     dest: /etc/cron.daily/
+
+    # - name: install rest-client gem 
+    #   command: gem install rest-client
+
+    # - name: Copy ruby download script 
+    #   copy:
+    #     src: "{{ playbook_dir }}/files/download.rb"
+    #     dest: /usr/local/bigbluebutton/core/scripts/post_publish/
+
+    # - name: Modify bigbluebutton.properties (defaultWelcomeMessageFooter, logoutURL, joinViaHTML5Client)
+    #   lineinfile:
+    #     path=/usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
+    #     regexp={{ item.regexp }}
+    #     line={{ item.line }}
+    #     backrefs=yes
+    #   with_items:
+        
+    #     - { regexp: '^bigbluebutton.web.serverURL=', line: 'bigbluebutton.web.serverURL= {{ DOMINIO }}' }
+
+    #     - { regexp: '^defaultWelcomeMessage=', line: 'defaultWelcomeMessage=<br><br>Bem-vindo \u00e0 <b>%%CONFNAME%%</b>!<br><br>Para participar da webconfer\u00eancia, seu computador deve ter, no m\u00ednimo, um <u>processador dual-core com pelo menos 2G de mem\u00f3ria, uma conex\u00e3o de 1Mbits de download e 0.5 Mbits de upload</u>. Voc\u00ea pode testar sua conex\u00e3o usando o <a href="https://speedtest.net" target="_blank" style="color: #1a0dab;"><u><b>speedtest.net</b></u></a>.<br><br>D\u00ea prefer\u00eancia a conex\u00f5es com cabo, redes sem fio podem ocasionar interrup\u00e7\u00f5es no \u00e1udio. Se sua internet estiver boa, o \u00e1udio tiver sido configurado corretamente e, mesmo assim, o seu \u00e1udio apresentar problemas, tente alternar de navegador. S\u00e3o recomendadas as \u00faltimas vers\u00f5es dos navegadores <a href="https://www.mozilla.org/pt-BR/firefox/new/" target="_blank" style="color: #1a0dab;"><u>Firefox</u></a> ou <a href="https://www.google.com.br/chrome/browser/desktop/" target="_blank" style="color: #1a0dab;"><u>Chrome</u></a>.<br><br>Ao final da webconfer\u00eancia, clique em sair, no canto superior direito, e responda ao nosso question\u00e1rio de avalia\u00e7\u00e3o da ferramenta.<br><br><b>Se esta webconfer\u00eancia estiver sendo gravada, a grava\u00e7\u00e3o ser\u00e1 armazenada por 180 dias. Ap\u00f3s este per\u00edodo, ser\u00e1 removida a fim de maximizar o uso da ferramenta em virtude da alta demanda.</b><br><br>Qualquer d\u00favida, problema ou dificuldade na utiliza\u00e7\u00e3o da ferramenta, <a href="{{ SUPPORT_URL }}" target="_blank" style="color: #1a0dab;">entre em contato com nosso suporte por meio da sala virtual de atendimento</a> ou entre em contato pelo email: {{ SUPPORT_EMAIL }}' }
+    #     - { regexp: '^defaultWelcomeMessageFooter=', line: 'defaultWelcomeMessageFooter=<br>' }
+    #     - { regexp: '^bigbluebutton.web.logoutURL=', line: 'bigbluebutton.web.logoutURL={{ FORM_LOGOUT_URL }}' }
+    
+    # - name: Modify settings.yml (clientTitle, copyright, helpLink)
+    #   lineinfile:
+    #     path=/usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml
+    #     regexp={{ item.regexp }}
+    #     line={{ item.line }}
+    #     backrefs=yes
+    #   with_items:
+    #     - { regexp: '^    clientTitle:', line: '    clientTitle: {{ CLIENT_TITLE }}' }
+    #     - { regexp: '^    copyright:', line: '    copyright: {{ COPYRIGHT }}' }
+    #     - { regexp: '^    helpLink:', line: '    helpLink: {{ SUPPORT_URL }}' }
+
+    # - name: Modify layout
+    #   lineinfile:
+    #     path: /usr/share/meteor/bundle/programs/web.browser/head.html
+    #     regexp: '^  <\/style>'
+    #     line: '    header[class^="navbar"] { background: #003e7a; } </style>'
+
+ 
+    # - name: Restart bbb-html5
+    #   systemd:
+    #     state: restarted
+    #     name: bbb-html5
+          
+    # - name: Restart bbb
+    #   command: bbb-conf --restart
+
+#     - name: Check bbb
+#       command: bbb-conf --check
+#       register : result
+#     - debug :
+#         var: result.stdout_lines
+
+# # NFS e Scalelite222
+#     - name: criando grupo
+#       ansible.builtin.group:
+#         name: scalelite-spool
+#         gid: 2000
+
+#     - name: Adicionando o user bigbluebutton no grupo scalelite-spool
+#       ansible.builtin.user:
+#         name: bigbluebutton
+#         group: scalelite-spool
+
+#     - name: Criando o diretório /mnt/scalelite-recordings
+#       ansible.builtin.file:
+#         path: /mnt/scalelite-recordings
+#         state: directory
+#         mode: '755'
+#         owner: bigbluebutton
+#         group: scalelite-spool
+    
+#     - name: instalando nfs-common
+#       apt:
+#         name: nfs-common
+#         state: present     
+
+#     #To install it use: ansible-galaxy collection install ansible.posix
+#     - name: Montando o NFS
+#       ansible.posix.mount:
+#         src: 10.44.24.253:/mnt/nfsfiles/scalelite
+#         path: /mnt/scalelite-recordings
+#         opts: rw,sync,hard,intr
+#         state: mounted
+#         fstype: nfs
+        
+#     - name: Download script scalelite_post_publish
+#       get_url:
+#         url: https://github.com/blindsidenetworks/scalelite/blob/master/bigbluebutton/scalelite_post_publish.rb
+#         dest: /usr/local/bigbluebutton/core/scripts/post_publish/scalelite_post_publish.rb
+#         #mode: '0440'
+
+#     - name: Criando scalelite.yml
+#       copy:
+#         dest: /usr/local/bigbluebutton/core/scripts/scalelite.yml
+#         content: |
+#           work_dir: /var/bigbluebutton/recording/scalelite
+#           spool_dir: /mnt/scalelite-recordings/var/bigbluebutton/spool
+
+#     # BigBlueButton Exporter
+#     - name: Create a directory if it does not exist
+#       ansible.builtin.file:
+#         path: ~/bbb-exporter
+#         state: directory
+#         mode: '0755'
+    # Instalando aptitude e Docker    
+    - name: Install aptitude using apt
+      apt: name=aptitude state=latest update_cache=yes force_apt_get=yes
+
+    - name: Install required system packages
+      apt: name={{ item }} state=latest update_cache=yes
+      loop: [ 'apt-transport-https', 'ca-certificates', 'curl', 'python-passlib','software-properties-common','apache2-utils']
+
+    - name: Add Docker GPG apt Key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add Docker Repository
+      apt_repository:
+        repo: deb https://download.docker.com/linux/ubuntu bionic stable
+        state: present
+
+    - name: Update apt and install docker-ce
+      apt: update_cache=yes name=docker-ce state=latest
+
+    - name: Update apt and install docker-compose
+      apt: update_cache=yes name=docker-compose state=latest
+
+
+    - name: Create docker-compose file
+      get_url:
+        url: https://raw.githubusercontent.com/greenstatic/bigbluebutton-exporter/master/extras/docker-compose.exporter.yaml
+        dest: ~/bbb-exporter/docker-compose.yaml
+        #mode: '0440'
+
+    - name: print secret
+      command: "bbb-conf --secret"
+      register: secret
+    
+    - name: captura a saida secret
+      set_fact:
+        secret: "{{ secret.stdout | regex_search('Secret: (.+)', '\\1') | first }}"
+
+    - name: Criando scalelite.yml
+      copy:
+        dest: ~/bbb-exporter/secrets.env
+        content: |
+          API_BASE_URL=https://{{ DOMINIO }}/bigbluebutton/api/
+          API_SECRET={{ secret }}
+
+    - name: docker-compose
+      command: sudo docker-compose up -d
+      args:
+        chdir: ~/bbb-exporter/          
+  
+    - name: adicionadn user
+      htpasswd:
+        path: /etc/nginx/.htpasswd
+        name: metrics
+        password: 58xmax21
+        crypt_scheme: apr_md5_crypt
+
+    # - name: apache2-utils
+    #   command: sudo apt-get install apache2-utils
+
+    # - name: Case insensitive password string match
+    #   ansible.builtin.expect:
+    #     command: sudo htpasswd -c /etc/nginx/.htpasswd metrics
+    #     responses:
+    #       (?i)password: "sTd#6515*%YGrgd"
+    #   # you don't want to show passwords in your logs
+    #   no_log: false
+    #   when: not stat_result.stat.exists
+
+    - name: Copy default pdf
+      copy:
+        src: "{{ playbook_dir }}/files/monitoring.nginx"
+        dest: /etc/bigbluebutton/nginx/
+        mode: '0755'
+
+    - name: apache2-utils
+      command: sudo nginx -t
+
+    - name: apache2-utils
+      command: sudo systemctl reload nginx

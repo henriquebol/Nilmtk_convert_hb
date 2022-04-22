@@ -1,0 +1,216 @@
+Train on 23936 samples, validate on 4225 samples
+Epoch 1/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 1.1282 - mse: 1.1282 - val_loss: 1.0468 - val_mse: 1.0468
+
+Epoch 00001: val_loss improved from inf to 1.04677, saving model to RNN-temp-weights-74894.h5
+Epoch 2/50
+23936/23936 [==============================] - 129s 5ms/step - loss: 0.9827 - mse: 0.9827 - val_loss: 1.0364 - val_mse: 1.0364
+
+Epoch 00002: val_loss improved from 1.04677 to 1.03641, saving model to RNN-temp-weights-74894.h5
+Epoch 3/50
+23936/23936 [==============================] - 137s 6ms/step - loss: 0.9724 - mse: 0.9724 - val_loss: 1.0242 - val_mse: 1.0242
+
+Epoch 00003: val_loss improved from 1.03641 to 1.02415, saving model to RNN-temp-weights-74894.h5
+Epoch 4/50
+23936/23936 [==============================] - 137s 6ms/step - loss: 0.9598 - mse: 0.9598 - val_loss: 1.0140 - val_mse: 1.0140
+
+Epoch 00004: val_loss improved from 1.02415 to 1.01402, saving model to RNN-temp-weights-74894.h5
+Epoch 5/50
+23936/23936 [==============================] - 137s 6ms/step - loss: 0.9500 - mse: 0.9500 - val_loss: 1.0129 - val_mse: 1.0129
+
+Epoch 00005: val_loss improved from 1.01402 to 1.01288, saving model to RNN-temp-weights-74894.h5
+Epoch 6/50
+23936/23936 [==============================] - 137s 6ms/step - loss: 0.9043 - mse: 0.9043 - val_loss: 0.9114 - val_mse: 0.9114
+
+Epoch 00006: val_loss improved from 1.01288 to 0.91143, saving model to RNN-temp-weights-74894.h5
+Epoch 7/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.7578 - mse: 0.7578 - val_loss: 0.8133 - val_mse: 0.8133
+
+Epoch 00007: val_loss improved from 0.91143 to 0.81335, saving model to RNN-temp-weights-74894.h5
+Epoch 8/50
+23936/23936 [==============================] - 137s 6ms/step - loss: 0.5922 - mse: 0.5922 - val_loss: 0.6384 - val_mse: 0.6384
+
+Epoch 00008: val_loss improved from 0.81335 to 0.63839, saving model to RNN-temp-weights-74894.h5
+Epoch 9/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.9807 - mse: 0.9807 - val_loss: 1.0008 - val_mse: 1.0008
+
+Epoch 00009: val_loss did not improve from 0.63839
+Epoch 10/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.8620 - mse: 0.8620 - val_loss: 0.8610 - val_mse: 0.8610
+
+Epoch 00010: val_loss did not improve from 0.63839
+Epoch 11/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.6937 - mse: 0.6937 - val_loss: 0.9889 - val_mse: 0.9889
+
+Epoch 00011: val_loss did not improve from 0.63839
+Epoch 12/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.7149 - mse: 0.7149 - val_loss: 0.8763 - val_mse: 0.8763
+
+Epoch 00012: val_loss did not improve from 0.63839
+Epoch 13/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.5507 - mse: 0.5507 - val_loss: 0.7385 - val_mse: 0.7385
+
+Epoch 00013: val_loss did not improve from 0.63839
+Epoch 14/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.4151 - mse: 0.4151 - val_loss: 0.5130 - val_mse: 0.5130
+
+Epoch 00014: val_loss improved from 0.63839 to 0.51299, saving model to RNN-temp-weights-74894.h5
+Epoch 15/50
+23936/23936 [==============================] - 137s 6ms/step - loss: 0.4027 - mse: 0.4027 - val_loss: 0.3781 - val_mse: 0.3781
+
+Epoch 00015: val_loss improved from 0.51299 to 0.37810, saving model to RNN-temp-weights-74894.h5
+Epoch 16/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.5067 - mse: 0.5067 - val_loss: 0.7655 - val_mse: 0.7655
+
+Epoch 00016: val_loss did not improve from 0.37810
+Epoch 17/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.6332 - mse: 0.6332 - val_loss: 0.6426 - val_mse: 0.6426
+
+Epoch 00017: val_loss did not improve from 0.37810
+Epoch 18/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.3998 - mse: 0.3998 - val_loss: 0.5159 - val_mse: 0.5159
+
+Epoch 00018: val_loss did not improve from 0.37810
+Epoch 19/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.3410 - mse: 0.3410 - val_loss: 0.4475 - val_mse: 0.4475
+
+Epoch 00019: val_loss did not improve from 0.37810
+Epoch 20/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.2236 - mse: 0.2236 - val_loss: 0.3234 - val_mse: 0.3234
+
+Epoch 00020: val_loss improved from 0.37810 to 0.32341, saving model to RNN-temp-weights-74894.h5
+Epoch 21/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.1884 - mse: 0.1884 - val_loss: 0.3125 - val_mse: 0.3125
+
+Epoch 00021: val_loss improved from 0.32341 to 0.31247, saving model to RNN-temp-weights-74894.h5
+Epoch 22/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.3168 - mse: 0.3168 - val_loss: 0.6221 - val_mse: 0.6221
+
+Epoch 00022: val_loss did not improve from 0.31247
+Epoch 23/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.2386 - mse: 0.2386 - val_loss: 0.2662 - val_mse: 0.2662
+
+Epoch 00023: val_loss improved from 0.31247 to 0.26622, saving model to RNN-temp-weights-74894.h5
+Epoch 24/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.1809 - mse: 0.1809 - val_loss: 0.5759 - val_mse: 0.5759
+
+Epoch 00024: val_loss did not improve from 0.26622
+Epoch 25/50
+23936/23936 [==============================] - 137s 6ms/step - loss: 0.1736 - mse: 0.1736 - val_loss: 0.2804 - val_mse: 0.2804
+
+Epoch 00025: val_loss did not improve from 0.26622
+Epoch 26/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.1568 - mse: 0.1568 - val_loss: 0.2447 - val_mse: 0.2447
+
+Epoch 00026: val_loss improved from 0.26622 to 0.24467, saving model to RNN-temp-weights-74894.h5
+Epoch 27/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.1468 - mse: 0.1468 - val_loss: 0.1805 - val_mse: 0.1805
+
+Epoch 00027: val_loss improved from 0.24467 to 0.18045, saving model to RNN-temp-weights-74894.h5
+Epoch 28/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.1468 - mse: 0.1468 - val_loss: 0.2536 - val_mse: 0.2536
+
+Epoch 00028: val_loss did not improve from 0.18045
+Epoch 29/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.1592 - mse: 0.1592 - val_loss: 0.2379 - val_mse: 0.2379
+
+Epoch 00029: val_loss did not improve from 0.18045
+Epoch 30/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.1500 - mse: 0.1500 - val_loss: 0.2445 - val_mse: 0.2445
+
+Epoch 00030: val_loss did not improve from 0.18045
+Epoch 31/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.1198 - mse: 0.1198 - val_loss: 0.3010 - val_mse: 0.3010
+
+Epoch 00031: val_loss did not improve from 0.18045
+Epoch 32/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.1206 - mse: 0.1206 - val_loss: 0.2827 - val_mse: 0.2827
+
+Epoch 00032: val_loss did not improve from 0.18045
+Epoch 33/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.1141 - mse: 0.1141 - val_loss: 0.1920 - val_mse: 0.1920
+
+Epoch 00033: val_loss did not improve from 0.18045
+Epoch 34/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.1191 - mse: 0.1191 - val_loss: 0.2009 - val_mse: 0.2009
+
+Epoch 00034: val_loss did not improve from 0.18045
+Epoch 35/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.1048 - mse: 0.1048 - val_loss: 0.1870 - val_mse: 0.1870
+
+Epoch 00035: val_loss did not improve from 0.18045
+Epoch 36/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.1397 - mse: 0.1397 - val_loss: 0.1662 - val_mse: 0.1662
+
+Epoch 00036: val_loss improved from 0.18045 to 0.16619, saving model to RNN-temp-weights-74894.h5
+Epoch 37/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.1263 - mse: 0.1263 - val_loss: 0.2682 - val_mse: 0.2682
+
+Epoch 00037: val_loss did not improve from 0.16619
+Epoch 38/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.1427 - mse: 0.1427 - val_loss: 0.2233 - val_mse: 0.2233
+
+Epoch 00038: val_loss did not improve from 0.16619
+Epoch 39/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.0990 - mse: 0.0990 - val_loss: 0.2675 - val_mse: 0.2675
+
+Epoch 00039: val_loss did not improve from 0.16619
+Epoch 40/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.1127 - mse: 0.1127 - val_loss: 0.1719 - val_mse: 0.1719
+
+Epoch 00040: val_loss did not improve from 0.16619
+Epoch 41/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.0814 - mse: 0.0814 - val_loss: 0.1294 - val_mse: 0.1294
+
+Epoch 00041: val_loss improved from 0.16619 to 0.12939, saving model to RNN-temp-weights-74894.h5
+Epoch 42/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.0766 - mse: 0.0766 - val_loss: 0.1339 - val_mse: 0.1339
+
+Epoch 00042: val_loss did not improve from 0.12939
+Epoch 43/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.0699 - mse: 0.0699 - val_loss: 0.2198 - val_mse: 0.2198
+
+Epoch 00043: val_loss did not improve from 0.12939
+Epoch 44/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.1056 - mse: 0.1056 - val_loss: 0.2333 - val_mse: 0.2333
+
+Epoch 00044: val_loss did not improve from 0.12939
+Epoch 45/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.0858 - mse: 0.0858 - val_loss: 0.1970 - val_mse: 0.1970
+
+Epoch 00045: val_loss did not improve from 0.12939
+Epoch 46/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.0966 - mse: 0.0966 - val_loss: 0.2171 - val_mse: 0.2171
+
+Epoch 00046: val_loss did not improve from 0.12939
+Epoch 47/50
+23936/23936 [==============================] - 138s 6ms/step - loss: 0.1173 - mse: 0.1173 - val_loss: 0.2222 - val_mse: 0.2222
+
+Epoch 00047: val_loss did not improve from 0.12939
+Epoch 48/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.0901 - mse: 0.0901 - val_loss: 0.1618 - val_mse: 0.1618
+
+Epoch 00048: val_loss did not improve from 0.12939
+Epoch 49/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.0956 - mse: 0.0956 - val_loss: 0.1945 - val_mse: 0.1945
+
+Epoch 00049: val_loss did not improve from 0.12939
+Epoch 50/50
+23936/23936 [==============================] - 139s 6ms/step - loss: 0.0829 - mse: 0.0829 - val_loss: 0.1670 - val_mse: 0.1670
+
+Epoch 00050: val_loss did not improve from 0.12939
+First model training for  fan
+Train on 23936 samples, validate on 4225 samples
+Epoch 1/50
+23936/23936 [==============================] - 144s 6ms/step - loss: 1.1871 - mse: 1.1871 - val_loss: 1.0159 - val_mse: 1.0159
+
+Epoch 00001: val_loss improved from inf to 1.01585, saving model to RNN-temp-weights-4270.h5
+Epoch 2/50
+23936/23936 [==============================] - 141s 6ms/step - loss: 1.0014 - mse: 1.0014 - val_loss: 1.0011 - val_mse: 1.0011
+
+Epoch 00002: val_loss improved from 1.01585 to 1.00114, saving model to RNN-temp-weights-4270.h5
+Epoch 3/50
+23552/23936 [============================>.] - ETA: 2s - loss: 0.9963 - mse: 0.9963
+1
+​
+
