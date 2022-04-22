@@ -1,0 +1,21 @@
+name: HB
+long_name: The Reference Energy Disaggregation Data set
+creators:
+- Henrique
+publication_date: 2021
+institution: IFCE
+contact: henrique@ufc.br   # Zico moved from MIT to CMU
+description: 3 weeks of data.
+subject: Disaggregated power demand from domestic buildings.
+number_of_buildings: 1
+timezone: America/Fortaleza   # MIT is on the east coast
+geo_location:
+  locality: Fortaleza
+  country: BR
+  latitude: -3.743443904897663
+  longitude: -38.526093995496886
+related_documents:
+- ...
+- >
+  ...
+schema: https://github.com/nilmtk/nilm_metadata/tree/v0.2

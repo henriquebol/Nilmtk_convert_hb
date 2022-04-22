@@ -1,0 +1,28 @@
+instance: 1   # this is the first building in the dataset
+# original_name: house_1   # original name from REDD dataset
+elec_meters:
+  1:
+    site_meter: true
+    device_model: REDD_whole_house
+    data_location: building1/elec/meter1
+  2:
+    submeter_of: 1 
+    device_model: eMonitor
+    data_location: building1/elec/meter2
+  3:
+    submeter_of: 1 
+    device_model: eMonitor
+    data_location: building1/elec/meter3
+
+appliances:
+- original_name: fan
+  type: fan
+  # on_power_threshold: 
+  instance: 1
+  meters: [2]
+
+- original_name: microwave
+  type: microwave
+  # on_power_threshold: 
+  instance: 1
+  meters: [3]
